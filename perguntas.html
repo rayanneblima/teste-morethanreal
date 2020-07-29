@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title> Projeto:  Teste Live | AR CMS </title>
+
+  <link href="static/cms/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <link href="static/cms/css/sbadmin2/sb-admin-2.min.css" rel="stylesheet">
+  <link href="static/cms/css/custom_styles.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#" style=" margin: 2% 0 2% 0">
+        <div class="sidebar-brand-icon" >
+          <img src="static/cms/images/morethanrealar.png" style="max-width: 42%; height: auto;">
+        </div>
+      </a>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <div class="sidebar-heading mb-3">
+        Olá, <span style="color: #EEEEEE; text-decoration: none;">Usuario!</span>
+      </div>
+
+      <hr class="sidebar-divider">
+
+      
+      <div class="sidebar-heading">
+        Workspace
+      </div>
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item active">
+        <a class="nav-link" href="/">
+          <i data-feather="sidebar" style="width: 1.1em;"></i>
+          <span> Cliente </span></a>
+      </li>
+
+      <hr class="sidebar-divider">
+
+      <li class="nav-item">
+        <a class="nav-link" href="/auth/logout">
+          <i data-feather="log-out" style="width: 1.1em; transform: scaleX(-1)"></i>
+          <span>Log-out</span>
+        </a>
+      </li>
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+        <script>
+            var proj_id = -1
+        </script>
+
+        <div class="container-fluid">
+
+            <!-- Header da página -->
+
+            <div class="row ml-1 mt-3 mb-3">
+                    <div class="col-md-9 my-auto">
+                        <span><a href="/"> < Voltar | </a> <h4 class="my-auto" style="display: inline-block ;">Teste Live</span>
+                    </div>
+                </span>
+            </div>
+            
+            <!-- Botões de navegação ao topo da página -->
+
+            <div class="row mt-5 mb-4">
+                <button class="btn col-md-1 ml-3 mr-1 btn-sm font-weight-bold"  onclick="window.location.href='/projeto/1'">Overview</button>
+                <button class="btn col-md-1 ml-1 mr-1 btn-sm font-weight-bold"  onclick="window.location.href='/projeto/1/metricas'">Métricas</button>
+                <button class="btn col-md-1 ml-1 mr-1 btn-sm font-weight-bold" onclick="window.location.href='/projeto/1/editar'">Editar</button>
+                <button class="btn btn-primary col-md-1 ml-1 mr-1 btn-sm font-weight-bold" onclick="window.location.href='/projeto/1/chat'">Live</button>
+            </div>
+
+            <!-- Card principal com o conteúdo da página-->
+
+            <div class="row shadow mb-4 mt-2 col-md-12" style="background-color: white; left: 1em;">
+              <div class="row" style="width: 100%;">
+                  <div style="width: 100%;">
+                      <div class="card chart-div">
+                          <div class="card-title title-chart">
+                              Mensagens
+                          </div>
+                          <div class="card-body">
+                              <span class="font-weight-bold">Ativar Live:</span>
+                                  <br>
+                              <label class="switch">
+                                  <input type="checkbox" id="switch-status" checked>
+                                  <span class="slider round"></span>
+                              </label>
+                          </div>
+                          <div class="card-body">
+
+                              <div class="row mt-3" style="margin: 0; padding: 0;">
+                                  <div class="holder-chat">
+                                      
+                                      <div class="organizer" id="2">
+                                          <div class="name-message-holder">
+                                              <div class="name">Marcello <span>12:04</span></div>
+                                              <div class="message">Mensagem de Teste</div>
+                                          </div>
+                                          <div class="icon icon-False" onclick="changeStatus(2)"><i data-feather="check-square"></i></div>
+                                      </div>
+                                      
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; More Than Real 2020</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <script>
+    feather.replace()
+  </script>
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="login.html">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src= "static/cms/vendor/jquery/jquery.min.js"></script>
+  <script src= "static/cms/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src= "static/cms/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <script src="static/cms/js/sb-admin-2.min.js"></script>
+  <script src="static/cms/js/chat.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+  <script src="static/cms/js/projects.js"></script>
+
+</body>
+
+</html>
