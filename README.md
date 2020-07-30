@@ -2,9 +2,9 @@
 
 ## Sumário
 
-Este repositório tem uma pequena fração do front-end que estamos trabalhando no nosso novo produto digital, mais precisamente o layout de perguntas de usuários para um vendedor. O usuário mandará perguntas para que o vendedor seja capaz de responde-las em tempo real, em uma live stream, e o vendedor também seja capaz de manter um controle sobre quais perguntas já foram respondidas, e quais ainda estão para serem respondidas.  
-Um esboço desta tela já foi feito utilizando HTML, Javascript e Bootstrap, mas há funcionalidades que estão faltando que precisam ser implementadas, como por exemplo: ao lado de cada mensagem, há uma caixa clicável aonde o vendedor sinaliza para o sistema se a pergunta já foi respondida, e no caso do clique, deve haver um feedback visual para o tal, pois a caixa deve trocar de cor, ao mesmo tempo que manda a requisição Ajax.  
-Em resumo, o projeto consiste em replicar o layout enviado pelo time de arte para um front-end funcional o mais fiel possível.  
+Este repositório tem uma pequena fração do front-end que estamos trabalhando no nosso novo produto digital, mais precisamente o layout de perguntas de usuários para um vendedor. O usuário mandará perguntas para que o vendedor seja capaz de responde-las em tempo real, em uma live stream, e o vendedor também seja capaz de manter um controle sobre quais perguntas já foram respondidas, e quais ainda estão para serem respondidas.  <br />
+Um esboço desta tela já foi feito utilizando HTML, Javascript e Bootstrap, mas há funcionalidades que estão faltando que precisam ser implementadas, como por exemplo: ao lado de cada mensagem, há uma caixa clicável aonde o vendedor sinaliza para o sistema se a pergunta já foi respondida, e no caso do clique, deve haver um feedback visual para o tal, pois a caixa deve trocar de cor, ao mesmo tempo que manda a requisição Ajax.  <br />
+Em resumo, o projeto consiste em replicar o layout enviado pelo time de arte para um front-end funcional o mais fiel possível.  <br />
 
 ## Objetivo
 
@@ -16,9 +16,9 @@ O objetivo desde teste é replicar o layout vindo do time de arte para um fronte
 
 ## Instruções
 
-O link do layout está [neste link](http://www.google.com.br) e a senha é **Senha**.  
+O link do layout está [neste link](http://www.google.com.br) e a senha é **Senha**.  <br />
 
-Este repositório tem o HTML principal (perguntas.html), e dentro da pasta _static_, temos os arquivos CSS utilizados, assim como os diferentes Javascripts e imagens. É recomendável que você crie seus novos arquivos caso faça grandes alterações, ou caso queira fazer tudo do seu jeito! 
+Este repositório tem o HTML principal (perguntas.html), e dentro da pasta _static_, temos os arquivos CSS utilizados, assim como os diferentes Javascripts e imagens. É recomendável que você crie seus novos arquivos caso faça grandes alterações, ou caso queira fazer tudo do seu jeito! <br />
 
 Os endpoints utilizados serão: 
 ```py
@@ -39,4 +39,5 @@ Qualquer mudança e se quiser utilizar quaisquer tecnologias adicionais (como Re
 
 ## Boa sorte!!
 ![](https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif)
+<br />
 Caso surja qualquer dúvida, por favor me contatar em [marcello@morethanreal.io](marcello@morethanreal.io). =)
