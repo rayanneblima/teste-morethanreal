@@ -13,6 +13,7 @@ O objetivo desde teste é replicar o layout vindo do time de arte para um fronte
 - Responsivo; 
 - Utilize requisições GET e PUT para o servidor de staging
 - Siga a referência do time de arte
+- As mensagens devem estar organizadas em ordem decrescente de acordo com a data
 
 ## Instruções
 
