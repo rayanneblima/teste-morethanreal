@@ -16,7 +16,7 @@ O objetivo desde teste é replicar o layout vindo do time de arte para um fronte
 
 ## Instruções
 
-O link do layout está [neste link](http://www.google.com.br) e a senha é **Senha**.  <br />
+O link do layout está [neste link](https://xd.adobe.com/view/a0f48dcb-4128-49bb-4e94-b1272069d223-d6c5/) e a senha é **TesteMore2020**.  <br />
 
 Este repositório tem o HTML principal (perguntas.html), e dentro da pasta _static_, temos os arquivos CSS utilizados, assim como os diferentes Javascripts e imagens. É recomendável que você crie seus novos arquivos caso faça grandes alterações, ou caso queira fazer tudo do seu jeito! <br />
 
@@ -27,6 +27,9 @@ Os endpoints utilizados serão:
 
     # Requisição para pegar uma mensagem em especifico (será util para o verbo PUT):
     https://staging.mtr.center/api/chat/message/<id da mensagem>/
+
+    # Requisição PUT para ativar ou desativar a LIVE. O field é "is_live_active" 
+    https://staging.mtr.center/api/project/6/
 
 ```
 
