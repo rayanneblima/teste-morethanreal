@@ -17,7 +17,7 @@ aside {
     color: #E2E9FF;
     height: 100%;
     padding: 25px 15px;
-    width: 225px; /* NOTE: LARGURA COM ASIDE ABERTO */
+    width: 224px; /* NOTE: LARGURA COM ASIDE ABERTO */
     position: fixed;
     z-index: 10;
     transition: 0.5s;
@@ -31,9 +31,11 @@ aside {
 }
 
 .img-logo {
+    display: block;
     height: 65px;
     margin: 0 auto;
     width: 80px;
+    max-width: 100%;
 }
 
 .img-logo:hover {
@@ -474,19 +476,37 @@ footer {
         width: 25%;
     }
 
+    .container-messages {
+        height: calc(100vh - 140px);
+        width: 125%;
+    }
+
 }
 
 @media (max-width: 430px) {
-    
-    section {
-        height: 210vh;
-        top: 200px;
-        width: 180vw;
+
+    .container-messages {
+        height: 180vh;
+        width: 325%;
     }
 
-    .data-message::before,
-    .data-message::after {
-        width: 25%;
+}
+
+
+@media (max-width: 380px) {
+
+    .container-messages {
+        height: 190vh;
+        width: 425%;
+    }
+
+}
+
+@media (max-width: 330px) {
+
+    .container-messages {
+        height: 200vh;
+        width: 550%;
     }
 
 }

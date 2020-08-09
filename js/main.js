@@ -12,8 +12,8 @@ $(document).ready(function() {
 
         function openSide() {
             $('.aside-push').removeClass('off').addClass('on');
-            $('aside').css('width', '225px');
-            $('main').css('marginLeft', '225px');
+            $('aside').css('width', '224px');
+            $('main').css('marginLeft', '224px');
         }
     });
 
@@ -48,28 +48,5 @@ $(document).ready(function() {
     $('.feedback-btn').on("mouseleave", function() {
         $('.feedback-btn p').css('visibility', 'hidden');
     });
-
-    /* TESTANDO ARMAZENAR MENSAGENS */
-    const receberMensagens = function () {
-        //event.preventDefault();
-        $.ajax({
-            type: "GET", 
-            url: 'https://staging.mtr.center/api/chat/message/',
-            contentType: 'application/json',
-            dataType: 'json',
-            // beforeSend: function() {
-            //     console.log("Carregando..."); //Carregando
-            // },
-            success: function(menssagens){
-                menssagens.forEach(menssagem => {
-                            
-                    
-                });
-            }
-
-        });
-
-    }
-    receberMensagens();
 
 })
