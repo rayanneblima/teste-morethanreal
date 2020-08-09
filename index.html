@@ -9,6 +9,7 @@
     <meta name="author" content="Rayanne Bertolace Lima">
     <title> Projeto: Teste Live | AR CMS </title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 
 </head>
@@ -22,150 +23,140 @@
             <li><span class="aside-menu-head">Olá, </span>"USERNAME"!</li>
             <span class="aside-menu-head">WORKSPACE</span>
             <li class="aside-item">
-                <span class="iconify" data-icon="bi:layout-sidebar" data-inline="false" style="color: #DBE3F9;"
+                <a href="#">
+                    <span class="iconify" data-icon="bi:layout-sidebar" data-inline="false" style="color: #DBE3F9;"
                     data-width="20px" data-height="30px"></span>
-                <span>Cliente</span>
+                    <span class="client-label">Cliente</span>
+                </a>
             </li>
             <li class="aside-item">
-                <span class="iconify" data-icon="feather-log-out" data-inline="false" style="color: #DBE3F9;"
-                    data-width="20px" data-height="30px" data-rotate="180deg"></span>
-                <span>Log-out</span>
+                <a href="">
+                    <span class="iconify" data-icon="feather-log-out" data-inline="false" style="color: #DBE3F9;"
+                        data-width="20px" data-height="30px" data-rotate="180deg"></span>
+                    <span class="logout-label">Log-out</span>
+                </a>
             </li>
         </ul>
 
-        <div class="aside-push">
-            <a href="">
-                <span class="iconify" data-icon="dashicons:arrow-left-alt2" data-inline="false" style="color: #DBE3F9;"
+        <div class="aside-push on">
+            <span class="iconify" data-icon="dashicons:arrow-left-alt2" data-inline="false" style="color: #DBE3F9;"
                     data-width="20px" data-height="20px"></span>
-            </a>
         </div>
     </aside>
 
-    <header>
-        <div class="header-title">
-            <a href="" class="previous-page">
-                <span class="iconify" data-icon="ic:outline-keyboard-arrow-left" data-inline="false"
-                    style="color: #495DA7;" data-width="20px">Voltar</span>
-                <span class="">Voltar</span>
-            </a>
+    <main>
+        <header>
+            <div class="header-title">
+                <a href="" class="previous-page">
+                    <span class="iconify" data-icon="ic:outline-keyboard-arrow-left" data-inline="false"
+                        style="color: #495DA7;" data-width="20px">Voltar</span>
+                    <span class="">Voltar</span>
+                </a>
 
-            <h1>Live Store</h1>
+                <h1>Live Store</h1>
 
-            <a href="" class="new-project">
-                <span class="iconify" data-icon="ant-design:plus-outlined" data-inline="false" style="color: #DBE3F9;"
-                    data-width="25px" data-height="25px"></span>
-                <span>Criar Novo Projeto</span>
-            </a>
-        </div>
-
-        <nav>
-            <ul class="main-menu">
-                <li><a href="">Overview</a></li>
-                <li><a href="">Métricas</a></li>
-                <li><a href="">Editar</a></li>
-                <li class="item-active"><a href="">Live</a></li>
-                <li><a href="">Catálogo</a></li>
-                <li><a href="">Chat</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section>
-        <article>
-            <p class="article-title">Status</p>
-            <p class="live-on">Ativar live:</p>
-            <label class="switch">
-                <input type="checkbox"> <!--Se ativar, incluir checked aqui-->
-                <span class="slider round"></span>
-                <span class="switch-status">Desativado</span>
-            </label>              
+                <a href="" class="new-project">
+                    <span class="iconify" data-icon="ant-design:plus-outlined" data-inline="false" style="color: #DBE3F9;"
+                        data-width="25px" data-height="25px"></span>
+                    <span>Criar Novo Projeto</span>
+                </a>
             </div>
 
-            <p class="article-title">Perguntas</p>
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="">Overview</a></li>
+                    <li><a href="">Métricas</a></li>
+                    <li><a href="">Editar</a></li>
+                    <li class="item-active"><a href="">Live</a></li>
+                    <li><a href="">Catálogo</a></li>
+                    <li><a href="">Chat</a></li>
+                </ul>
+            </nav>
+        </header>
 
-            <div class="container-messages">
-
-                <div class="day-messages">
-
-                    <p class="data-message">Domingo 09/05/2020</p>
-
-                    <div class="message-item checked">
-                        <p class="client-name">Marcos <span class="message-time">12:02</span></p>
-                        <p class="message-content">Lorem ipsum dolor sit amet?</p>
-                        <a href="" class="check-button checked-button"><span class="iconify" data-icon="bi:check" data-inline="false" style="color: #DBE3F9;"
-                                data-width="40px" data-height="40px"></span></a>
-                    </div>
+        <section>
+            <article>
+                <p class="article-title">Status</p>
+                <p class="live-on">Ativar live:</p>
+                <label class="switch">
+                    <input type="checkbox"> <!--Se ativar, incluir checked aqui-->
+                    <span class="slider round"></span>
+                    <span class="switch-status">Desativado</span> <!--Se ativar, trocar para Ativado aqui-->
+                </label>              
                 </div>
 
-                <div class="day-messages">
+                <p class="article-title">Perguntas</p>
 
-                    <p class="data-message">Segunda - feira 10/05/2020</p>
+                <div class="container-messages">
 
-                    <div class="message-item checked">
-                        <p class="client-name">Marcos <span class="message-time">12:02</span></p>
-                        <p class="message-content">Lorem ipsum dolor sit amet?</p>
-                        <a href="" class="check-button checked-button"><span class="iconify" data-icon="bi:check" data-inline="false" style="color: #DBE3F9;"
-                                data-width="40px" data-height="40px"></span></a>
-                    </div>
-    
-                    <div class="message-item checked">
-                        <p class="client-name">CLIENTE <span class="message-time">HORARIO</span></p>
-                        <p class="message-content">MENSAGEM</p>
-                        <a href="" class="check-button checked-button"><span class="iconify" data-icon="bi:check" data-inline="false" style="color: #DBE3F9;"
-                            data-width="40px" data-height="40px"></span></a>
-                    </div>
-    
-                    <div class="message-item checked">
-                        <p class="client-name">CLIENTE <span class="message-time">HORARIO</span></p>
-                        <p class="message-content">MENSAGEM</p>
-                        <a href="" class="check-button checked-button"><span class="iconify" data-icon="bi:check" data-inline="false" style="color: #DBE3F9;"
-                            data-width="40px" data-height="40px"></span></a>
-                    </div>
+                    <div class="container-scroll">
 
-                    <div class="message-item">
-                        <p class="client-name">CLIENTE <span class="message-time">HORARIO</span></p>
-                        <p class="message-content">MENSAGEM</p>
-                        <a href="" class="check-button"><span class="iconify" data-icon="bi:check" data-inline="false" style="color: #DBE3F9;"
-                            data-width="40px" data-height="40px"></span></a>
-                    </div>
+                        <div class="day-messages">
+
+                            <p class="data-message">Domingo 09/05/2020</p>
     
-                    <div class="message-item">
-                        <p class="client-name">CLIENTE <span class="message-time">HORARIO</span></p>
-                        <p class="message-content">MENSAGEM</p>
-                        <a href="" class="check-button"><span class="iconify" data-icon="bi:check" data-inline="false" style="color: #DBE3F9;"
-                            data-width="40px" data-height="40px"></span></a>
-                    </div>
+                            <div class="message-item checked">
+                                <div style="display: flex;">
+                                    <p class="client-name">Marcos</p>
+                                    <p class="message-time">12:02</p>
+                                </div>
+                                <p class="message-content">Lorem ipsum dolor sit amet?</p>
+                                <div class="check-button checked-button"><span class="iconify" data-icon="bi:check" data-inline="false" style="color: #DBE3F9;"
+                                        data-width="40px" data-height="40px"></span></div>
+                            </div>
+                        </div>
     
-                    <div class="message-item">
-                        <p class="client-name">CLIENTE <span class="message-time">HORARIO</span></p>
-                        <p class="message-content">MENSAGEM</p>
-                        <a href="" class="check-button"><span class="iconify" data-icon="bi:check" data-inline="false" style="color: #DBE3F9;"
-                            data-width="40px" data-height="40px"></span></a>
+                        <div class="day-messages">
+    
+                            <p class="data-message">Segunda - feira 10/05/2020</p>
+    
+                            <div class="message-item checked">
+                                <div style="display: flex;">
+                                    <p class="client-name">Marcos</p>
+                                    <p class="message-time">12:02</p>
+                                </div>
+                                <p class="message-content">Lorem ipsum dolor sit amet?</p>
+                                <div class="check-button checked-button"><span class="iconify" data-icon="bi:check" data-inline="false" style="color: #DBE3F9;"
+                                        data-width="40px" data-height="40px"></span></div>
+                            </div>
+            
+                            <div class="message-item checked">
+                                <div style="display: flex;">
+                                    <p class="client-name">Marcos</p>
+                                    <p class="message-time">12:02</p>
+                                </div>
+                                <p class="message-content">Lorem ipsum dolor sit amet?</p>
+                                <div class="check-button checked-button"><span class="iconify" data-icon="bi:check" data-inline="false" style="color: #DBE3F9;"
+                                        data-width="40px" data-height="40px"></span></div>
+                            </div>
+            
+                        </div>
+
                     </div>
+                    
                 </div>
-                
-            </div>
-        </article>
-    </section>
+            </article>
+        </section>
 
-    <div class="message-btn">
-        <a href="">
-            <span class="iconify" data-icon="feather:message-square" data-inline="false" style="color: #DBE3F9;"
-                data-width="30px" data-height="30px"></span>
-        </a>
-    </div>
+    </main>
 
     <footer>
         <p>Copyright &copy; More Than Real 2020</p>
     </footer>
 
+    <div class="feedback-btn">
+        <p>Feedback</p>
+        <a href="">
+            <span class="iconify" data-icon="feather:message-square" data-inline="false" style="color: #DBE3F9;" data-width="30px" data-height="30px"></span>
+        </a>
+    </div>
 
-    <!--NOTE:
 
-        TOGGLE SWITCH https://www.w3schools.com/howto/howto_css_switch.asp
-        
+    <!--NOTE:        
         ADOBE XD https://xd.adobe.com/view/a0f48dcb-4128-49bb-4e94-b1272069d223-d6c5/specs/
     -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
