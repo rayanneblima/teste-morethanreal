@@ -1,5 +1,4 @@
 /* NOTE: TESTANDO ARMAZENAR MENSAGENS */
-
 const getjSONMessages = function () {
 
     // Capturando todas as mensagens do link por GET
@@ -39,7 +38,8 @@ const getjSONMessages = function () {
 
         /* FORMATA A DATA PARA FACILITAR AGRUPAMENTO POR DD/MM/AAAA */
         for (let index = 0; index < array.length; index++) {
-            array[index].date = array[index].date.substring(0, 15);
+            array[index].time = array[index].date.substring(16, 24); //ATRIBUI A HORA DA MSG
+            array[index].date = array[index].date.substring(0, 15); //ATRIBUI DD/MM/AAAA
             newArray.push(array[index]);
         }
 
@@ -56,26 +56,36 @@ const getjSONMessages = function () {
                 }
             });
 
+
+            //NOTE: FALTA MEXER AQUI!! PROBLEMA NO MAP PQ TROQUEI A FORMA DA DATA
+            //NOTE: PROBLEMA NO CHECK BUTTON POR NAO ATUALIZAR O CLICK
+
+
             // FUNÇÃO QUE TRANSFORMA O MAP EM ARRAY DE ARRAY E PEGA INDIVIDUALMENTE CADA LINHA DO OBJETO
             const arr = Array.from(map);
-            arr.forEach(element => {
-                const dia = element[0]; // PEGA A DATA REFERENTE AS MENSAGENS
-                console.log(dia)
-                console.log(dia.length)
-                document.querySelector('.data-message').textContent = dia; // pega apenas o ultimo
+            const divScroll = document.querySelector('.container-scroll');
+            //arr = [dayMsg, arrDayMsg[0,1,2,3]]
+            //arr = [index[0], index[1][]]
+            for (let index = 0; index < arr.length; index++) {
+                const dayMsg = arr[index][0];
+                const arrDayMsg = arr[index][1];
+                const divDayMessages = document.createElement('div');
+                divDayMessages.classList.add('day-messages');
+                divDayMessages.innerHTML = `<p class="data-message"> ${dayMsg} </p>`;
+              
+                for (let index = 0; index < arrDayMsg.length; index++) {
+                    if(!arrDayMsg[index].read) {
+                        const card = `<div class="message-item"><div style="display: flex;"><p class="client-name"> ${arrDayMsg[index].name} </p><p class="message-time"> ${arrDayMsg[index].time} </p></div><p class="message-content"> ${arrDayMsg[index].message} </p><div class="check-button"><span class="iconify" data-icon="bi:check" data-inline="false" style="color: #DBE3F9;"data-width="40px" data-height="40px"></span></div></div>`
+                        divDayMessages.innerHTML += card;
+                    }
 
-                // PEGA CADA MENSAGEM DO DIA
-                element[1].forEach(item => {
-                    const imprimir = "Meu id é: " + item.id +
-                        "Meu nome é: " + item.name +
-                        "Menssagem é: " + item.message +
-                        "Status da mensagem: " + item.read;
-                        document.querySelector('.day-messages').append(imprimir);
-                })
-
-                //TODO: CRIAR DIV DO DIA E DIV A CADA MENSAGEN COM A FUNÇÃO ACIMA
-            });
-
+                    else {
+                        const card = `<div class="message-item checked"><div style="display: flex;"><p class="client-name"> ${arrDayMsg[index].name} </p><p class="message-time"> ${arrDayMsg[index].time} </p></div><p class="message-content"> ${arrDayMsg[index].message} </p><div class="check-button checked-button"><span class="iconify" data-icon="bi:check" data-inline="false" style="color: #DBE3F9;"data-width="40px" data-height="40px"></span></div></div>`
+                        divDayMessages.innerHTML += card;
+                    }
+                }
+                divScroll.append(divDayMessages); 
+            }
             return map;
         }
 
@@ -86,32 +96,10 @@ const getjSONMessages = function () {
             return 0;
         }
 
-        // RETORNA UMA 'PILHA' DE MENSAGEM, ONDE A PRIMEIRA É A MAIS RECENTE!
+        // RETORNA UMA PILHA DE MENSAGEM, ONDE A PRIMEIRA É A MAIS RECENTE!
         const groupedMessageByDate = groupBy(newArray.sort(sortByID), message => message.date);
     }
 
 }
 
 getjSONMessages();
-
-
-// function createDayMessages() {
-//     const divContainer = document.querySelector(".container-scroll");
-//      const divDayMessages = '<div class="day-messages"><p class="data-message">' + 'message.data' + '</p>';
-//       const pDataMessage = document.createElement("p").classList.add("data-message"); //todo: adicionar texto
-//       const divMessageItem = document.createElement("div").classList.add("message-item");
-//         const div = document.createElement("div").style.display = "flex";
-//           const pClientName = document.createElement("p").classList.add("client-name"); //todo: adicionar texto
-//           const pMessageTime = document.createElement("p").classList.add("message-time"); //todo: adicionar texto
-//         const divCheckButton = document.createElement("div").classList.add("check-button");
-//           const svgButton = '<span class="iconify" data-icon="bi:check" data-inline="false" style="color: #DBE3F9;" data-width="40px" data-height="40px"></span>';
-//         //divCheckButton.innerHTML = svgButton;
-
-
-//         divContainer.innerHTML  = divDayMessages;
-
-        
-//         // <div class="message-item checked"><div style="display: flex;"><p class="client-name">Marcos</p><p class="message-time">12:02</p></div><p class="message-content">Lorem ipsum dolor sit amet?</p><div class="check-button checked-button"><span class="iconify" data-icon="bi:check" data-inline="false" style="color: #DBE3F9;" data-width="40px" data-height="40px"></span></div></div>';
-        
-
-// }
