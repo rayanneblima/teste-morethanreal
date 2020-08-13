@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+       
     /* SIDE MENU TOGGLE */
     $('.aside-push').on("click", function() {
         ($('.aside-push').hasClass('on'))? closeSide() : openSide();
@@ -28,18 +28,6 @@ $(document).ready(function() {
         }
     });
 
-    /* CHECK BUTTON - MESSAGES */
-    /* NOTE: VARRER O ARRAY DE MENSAGENS E RETORNAR O INDEX DO BOTAO CLICADO!*/
-    $('.check-button').on("click", function() {
-        if($('.check-button').hasClass('checked-button')) {
-            $('.check-button').removeClass('checked-button');
-            $('.message-item').removeClass('checked');
-        } else {
-            $('.check-button').addClass('checked-button');
-            $('.message-item').addClass('checked');
-        }
-    });
-
     /* FEEDBACK BUTTON */
     $('.feedback-btn').on("mouseover", function() {
         $('.feedback-btn p').css('visibility', 'visible');
@@ -47,6 +35,11 @@ $(document).ready(function() {
 
     $('.feedback-btn').on("mouseleave", function() {
         $('.feedback-btn p').css('visibility', 'hidden');
-    });
+    })
 
 })
+
+
+// saber qual foi clicado https://pt.stackoverflow.com/questions/11365/como-saber-se-um-elemento-foi-clicado-usando-javascript-puro
+
+// esperar popular o container e depois fazer a busca pelo botao (async await)
