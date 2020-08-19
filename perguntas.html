@@ -1,179 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
-
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title> Projeto:  Teste Live | AR CMS </title>
-
-  <link href="static/cms/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-  <link href="static/cms/css/sbadmin2/sb-admin-2.min.css" rel="stylesheet">
-  <link href="static/cms/css/custom_styles.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Rayanne Bertolace Lima">
+    <title> Projeto: Teste Live | AR CMS </title>
+    <link rel="stylesheet" href="static/cms/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 
 </head>
 
-<body id="page-top">
-
-  <!-- Page Wrapper -->
-  <div id="wrapper">
-
-    <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-      <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#" style=" margin: 2% 0 2% 0">
-        <div class="sidebar-brand-icon" >
-          <img src="static/cms/images/morethanrealar.png" style="max-width: 42%; height: auto;">
+<body>
+    <aside>
+        <div class="logo"><a href="#"><img class="img-logo" src="static/cms/images/morethanrealar.png " alt="More Than Real" /></a>
         </div>
-      </a>
 
-      <!-- Divider -->
-      <hr class="sidebar-divider">
+        <ul class="aside-menu">
+            <li><span class="aside-menu-head">Olá, </span>"USERNAME"!</li>
+            <span class="aside-menu-head">WORKSPACE</span>
+            <li class="aside-item">
+                <a href="#">
+                    <span class="iconify" data-icon="bi:layout-sidebar" data-inline="false" style="color: #DBE3F9;"
+                    data-width="20px" data-height="30px"></span>
+                    <span class="client-label">Cliente</span>
+                </a>
+            </li>
+            <li class="aside-item">
+                <a href="#">
+                    <span class="iconify" data-icon="feather-log-out" data-inline="false" style="color: #DBE3F9;"
+                        data-width="20px" data-height="30px" data-rotate="180deg"></span>
+                    <span class="logout-label">Log-out</span>
+                </a>
+            </li>
+        </ul>
 
-      <div class="sidebar-heading mb-3">
-        Olá, <span style="color: #EEEEEE; text-decoration: none;">Usuario!</span>
-      </div>
+        <div class="aside-push on">
+            <span class="iconify" data-icon="dashicons:arrow-left-alt2" data-inline="false" style="color: #DBE3F9;"
+                    data-width="20px" data-height="20px"></span>
+        </div>
+    </aside>
 
-      <hr class="sidebar-divider">
+    <main>
+        <header>
+            <div class="header-title">
+                <a href="#" class="previous-page">
+                    <span class="iconify" data-icon="ic:outline-keyboard-arrow-left" data-inline="false"
+                        style="color: #495DA7;" data-width="20px">Voltar</span>
+                    <span class="">Voltar</span>
+                </a>
 
-      
-      <div class="sidebar-heading">
-        Workspace
-      </div>
-      <!-- Nav Item - Dashboard -->
-      <li class="nav-item active">
-        <a class="nav-link" href="/">
-          <i data-feather="sidebar" style="width: 1.1em;"></i>
-          <span> Cliente </span></a>
-      </li>
+                <h1>Live Store</h1>
 
-      <hr class="sidebar-divider">
+                <a href="#" class="new-project">
+                    <span class="iconify" data-icon="ant-design:plus-outlined" data-inline="false" style="color: #DBE3F9;"
+                        data-width="25px" data-height="25px"></span>
+                    <span>Criar Novo Projeto</span>
+                </a>
+            </div>
 
-      <li class="nav-item">
-        <a class="nav-link" href="/auth/logout">
-          <i data-feather="log-out" style="width: 1.1em; transform: scaleX(-1)"></i>
-          <span>Log-out</span>
-        </a>
-      </li>
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="#">Overview</a></li>
+                    <li><a href="#">Métricas</a></li>
+                    <li><a href="#">Editar</a></li>
+                    <li class="item-active"><a href="#">Live</a></li>
+                    <li><a href="#">Catálogo</a></li>
+                    <li><a href="#">Chat</a></li>
+                </ul>
+            </nav>
+        </header>
 
-      <!-- Sidebar Toggler (Sidebar) -->
-      <div class="text-center d-none d-md-inline">
-        <button class="rounded-circle border-0" id="sidebarToggle"></button>
-      </div>
+        <section>
+            <article>
+                <p class="article-title">Status</p>
+                <p class="live-on">Ativar live:</p>
+                <label class="switch">
+                    <input type="checkbox"> <!--Se ativar, incluir checked aqui-->
+                    <span class="slider round"></span>
+                    <span class="switch-status">Desativado</span> <!--Se ativar, trocar para Ativado aqui-->
+                </label>              
+                </div>
 
-    </ul>
+                <p class="article-title">Perguntas</p>
 
-    <!-- Content Wrapper -->
-    <div id="content-wrapper" class="d-flex flex-column">
+                <div class="container-messages">
 
-      <!-- Main Content -->
-      <div id="content">
-        <script>
-            var proj_id = -1
-        </script>
+                    <div class="container-scroll">
 
-        <div class="container-fluid">
-
-            <!-- Header da página -->
-
-            <div class="row ml-1 mt-3 mb-3">
-                    <div class="col-md-9 my-auto">
-                        <span><a href="/"> < Voltar | </a> <h4 class="my-auto" style="display: inline-block ;">Teste Live</span>
                     </div>
-                </span>
-            </div>
-            
-            <!-- Botões de navegação ao topo da página -->
+                    
+                </div>
+            </article>
+        </section>
 
-            <div class="row mt-5 mb-4">
-                <button class="btn col-md-1 ml-3 mr-1 btn-sm font-weight-bold"  onclick="window.location.href='/projeto/1'">Overview</button>
-                <button class="btn col-md-1 ml-1 mr-1 btn-sm font-weight-bold"  onclick="window.location.href='/projeto/1/metricas'">Métricas</button>
-                <button class="btn col-md-1 ml-1 mr-1 btn-sm font-weight-bold" onclick="window.location.href='/projeto/1/editar'">Editar</button>
-                <button class="btn btn-primary col-md-1 ml-1 mr-1 btn-sm font-weight-bold" onclick="window.location.href='/projeto/1/chat'">Live</button>
-            </div>
+    </main>
 
-            <!-- Card principal com o conteúdo da página-->
+    <footer>
+        <p>Copyright &copy; More Than Real 2020</p>
+    </footer>
 
-            <div class="row shadow mb-4 mt-2 col-md-12" style="background-color: white; left: 1em;">
-              <div class="row" style="width: 100%;">
-                  <div style="width: 100%;">
-                      <div class="card chart-div">
-                          <div class="card-title title-chart">
-                              Mensagens
-                          </div>
-                          <div class="card-body">
-            
-                          </div>
-                          <div class="card-body">
-
-                          </div>
-                      </div>
-                  </div>
-              </div>
-            </div>
-        </div>
-      </div>
-      <!-- End of Main Content -->
-
-      <!-- Footer -->
-      <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
-            <span>Copyright &copy; More Than Real 2020</span>
-          </div>
-        </div>
-      </footer>
-      <!-- End of Footer -->
-
+    <div class="feedback-btn">
+        <p>Feedback</p>
+        <a href="#">
+            <span class="iconify" data-icon="feather:message-square" data-inline="false" style="color: #DBE3F9;" data-width="30px" data-height="30px"></span>
+        </a>
     </div>
-    <!-- End of Content Wrapper -->
 
-  </div>
-  <!-- End of Page Wrapper -->
 
-  <!-- Scroll to Top Button-->
-  <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-  </a>
-
-  <script>
-    feather.replace()
-  </script>
-  <!-- Logout Modal-->
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script src= "static/cms/vendor/jquery/jquery.min.js"></script>
-  <script src= "static/cms/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src= "static/cms/vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <script src="static/cms/js/sb-admin-2.min.js"></script>
-  <script src="static/cms/js/chat.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
-  <script src="static/cms/js/projects.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="static/cms/js/messages.js"></script>
+    <script src="static/cms/js/main.js"></script>
 </body>
 
 </html>
